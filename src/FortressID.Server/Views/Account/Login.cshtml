@@ -1,0 +1,52 @@
+@using FortressID.Server.ViewModels
+@model LoginViewModel
+
+@{
+    ViewData["Title"] = "Iniciar Sesión - FortressID";
+    // Recuperamos el ReturnUrl que mandó el controlador
+    var returnUrl = ViewData["ReturnUrl"] as string;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+        .brand { text-align: center; color: #2c3e50; margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1rem; }
+        label { display: block; margin-bottom: 0.5rem; color: #666; }
+        input { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; padding: 1rem; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem; }
+        button:hover { background-color: #0056b3; }
+        .text-danger { color: #dc3545; font-size: 0.875rem; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h2 class="brand">🛡️ FortressID</h2>
+        
+        <form asp-controller="Account" asp-action="Login" method="post">
+            <input type="hidden" name="ReturnUrl" value="@returnUrl" />
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label>Email Corporativo</label>
+                <input asp-for="Email" placeholder="admin@fortress.local" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Contraseña</label>
+                <input asp-for="Password" type="password" placeholder="••••••••" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <button type="submit">Ingresar a la Bóveda</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+@FortressID.Server_HostAddress = http://localhost:5222
+
+GET {{FortressID.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

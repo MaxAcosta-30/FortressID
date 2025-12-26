@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FortressID.Data/FortressID.Data.csproj" />
+    <Project Path="src/FortressID.Server/FortressID.Server.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/FortressID.Tests/FortressID.Tests.csproj" />
+  </Folder>
+</Solution>
