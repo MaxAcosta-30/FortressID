@@ -45,7 +45,7 @@ FortressID/
 ### 1. Clonar el Repositorio
 
 ```bash
-git clone <url-del-repositorio>
+git clone <https://github.com/MaxAcosta-30/FortressID>
 cd FortressID
 ```
 
