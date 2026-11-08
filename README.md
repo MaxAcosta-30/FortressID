@@ -1,5 +1,7 @@
 # FortressID - Servidor de Identidad Centralizado
 
+<p align="center"><img src="docs/portada.svg" alt="FortressID: identidad centralizada con OpenID Connect, OpenIddict y PKCE" width="100%"></p>
+
 Servidor de autorización OAuth2/OpenID Connect implementado con OpenIddict y ASP.NET Core Identity sobre .NET 10. Proporciona autenticación y autorización centralizada mediante el flujo Authorization Code con PKCE y soporte para Refresh Tokens.
 
 ## Arquitectura
